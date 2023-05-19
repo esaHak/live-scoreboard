@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Table Tennis Scoreboard</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <h1>Efecte table tennis tournament</h1>
+  <p>Set</p>
+  <p id="currentset">1</p>
+  <div id="scoreboard">
+    <div id="team1">
+      <h2>Team 1</h2>
+      <div class="score-section">
+        <p id="team1score">0</p>
+        <button onclick="incrementScore(1)">+</button>
+      </div>
+      <button id="decreasebutton" onclick="decreaseScore(1)">-</button>
+      <div class="sets-section">
+        <h3>Sets</h3>
+        <ul id="team1-sets">0
+        </ul>
+      </div>
+    </div>
+    <div id="team2">
+      <h2>Team 2</h2>
+      <div class="score-section">
+        <p id="team2score">0</p>
+        <button onclick="incrementScore(2)">+</button>
+      </div>
+      <button id="decreasebutton" onclick="decreaseScore(2)">-</button>
+      <div class="sets-section">
+        <h3>Sets</h3>
+        <ul id="team2-sets">0
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="previoussetscores">
+    <div>
+    <table id="setscores" class="setscores">
+      <tr>
+        <th rowspan="2">Set</th>
+        <th colspan="2">Score</th>
+      </tr>
+      <tr>
+        <th>Team 1</th>
+        <th>Team 2</th>
+      </tr>
+    </table>
+  </div>
+  </div>
+  <div class="reset-section">
+    <div>
+      <button onclick="resetAll()">Reset all scores</button>
+    </div>
+  </div>
+</body>
+</html>
